@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
   ],
   "automerge": true,
   "rebaseWhen": "conflicted",
@@ -12,6 +12,13 @@
       "matchStrings": [
         "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n.*?\"(?<currentValue>.*)\"\\n"
       ]
+    }
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "matchPackageNames": ["ghcr.io/cloudnative-pg/postgresql"],
+      "enabled": false
     }
   ]
 }
