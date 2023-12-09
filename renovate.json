@@ -11,5 +11,10 @@
         "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n.*?\"(?<currentValue>.*)\"\\n"
       ]
     }
+  ],
+  "packageRules": [
+    {
+      "matchFileNames": ["versions.yaml"]
+    }
   ]
 }
