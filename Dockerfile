@@ -4,6 +4,7 @@ FROM curlimages/curl AS download
 
 ARG CNPG_TAG
 ARG PGVECTORS_TAG
+ARG TARGETARCH
 
 WORKDIR /download
 RUN pg_major=$(echo $CNPG_TAG | cut -d'.' -f1) \
