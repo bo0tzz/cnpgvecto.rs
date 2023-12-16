@@ -38,6 +38,8 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJson(needs.configure.outputs.matrix) }}
 
+    name: Build (${{ matrix.cnpg }})
+
     steps:
       # Setup
 
