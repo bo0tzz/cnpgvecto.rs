@@ -7,7 +7,7 @@ ARG PGVECTORS_TAG
 
 WORKDIR /download
 RUN pg_major=$(echo $CNPG_TAG | cut -d'.' -f1) \
-    && curl -o pgvectors.deb -sSL https://github.com/tensorchord/pgvecto.rs/releases/download/$PGVECTORS_TAG/vectors-pg${pg_major}_$PGVECTORS_TAG_$(uname -m).deb
+    && curl --fail -o pgvectors.deb -sSL https://github.com/tensorchord/pgvecto.rs/releases/download/$PGVECTORS_TAG/vectors-pg${pg_major}_$PGVECTORS_TAG_$(uname -m).deb
 
 FROM ghcr.io/cloudnative-pg/postgresql:$CNPG_TAG
 
