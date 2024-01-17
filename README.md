@@ -1,3 +1,7 @@
+> [!NOTE]
+> This repository has been archived in favour of https://github.com/tensorchord/cloudnative-pgvecto.rs.  
+> You can safely continue using the images from this repository until you need to upgrade to a new pgvecto.rs version.
+
 # cnpgvecto.rs
 Container images for [cloudnative-pg](https://cloudnative-pg.io/) with the [pgvecto.rs](https://github.com/tensorchord/pgvecto.rs) extension installed.
 
